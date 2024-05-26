@@ -1,0 +1,136 @@
+/* etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100%;
+    height: auto;
+    /* font-size: 1em; */
+    color: rgb(16, 13, 27);
+}
+
+footer {
+    width: 100%;
+    height: 5em;
+    background-image: linear-gradient(rgb(201, 201, 201), rgb(16, 13, 27));
+}
+
+/* identificadores */
+#header {
+    margin: 0;
+    background-color: rgb(16, 13, 27);
+    /* position: relative; */
+    width: 100%;
+    color: rgb(211, 211, 211);
+}
+
+#navbar {
+    display: none;
+    width: 6em;
+    height: 10em;
+    background-color:  rgb(201, 201, 201);
+    border-radius: 0.5em;
+    color: rgb(16, 13, 27) !important;
+}
+
+#div-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr;
+}
+
+
+/* clases */
+.container {
+    background-color: rgb(201, 201, 201);
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    background-color: rgb(16, 13, 27);
+    border: 0;
+    padding: 0.3em 0.6em;
+    align-items: center;
+    border-radius: 0.5em;
+    transition: linear 0.2s;
+}
+.button:hover {
+    background-color: rgb(35, 29, 59);
+}
+
+.button i {
+    color: rgb(255, 255, 255);
+    margin: auto;
+    padding: auto;
+}
+
+.box a {
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+}
+
+.text {
+    margin: 0.2em;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.list {
+    margin: 0.5em;
+    padding: 0.5em;
+    list-style: none;
+}
+
+.list li {
+    padding: 0.2em;
+    list-style-type: none;
+    /* display: inline; */
+}
+
+.element {
+    width: 18.75em;
+    height: 18.75em;
+    background-color: rgba(143, 175, 235, 0.5);
+}
+
+/* estandares */
+.font-sm {
+    font-size: small;
+}
+.font-lg {
+    font-size: large;
+}
+.font-blg {
+    font-size: x-large;
+}
+
+.space-sm {
+    margin: 0.15em;
+    padding: 0.15em;
+}
+.space-lg {
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.space-blg {
+    margin: 2em;
+    padding: 1em;
+}
+
+.size-sm {
+    width: 40%;
+}
+.size-lg {
+    width: 100%;
+}
+.size-blg {
+    width: 150%;
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}

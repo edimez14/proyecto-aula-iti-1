@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="src/css/style.css">
+        <script src="src/js/script.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="header" class="box space-lg">
+            <div class="box space-lg" id="button-navbar">
+                <button class="button">
+                    <i class='bx bx-menu bx-rotate-180 font-blg' ></i>
+                </button>
+                <nav id="navbar">
+                    <button id="close"  class="button">
+                        <i class='bx bx-window-close' ></i>
+                    </button>
+                    <ul>
+                        <li><a href="#">link 1</a></li>
+                        <li><a href="#">link 2</a></li>
+                        <li><a href="#">link 3</a></li>
+                        <li><a href="#">link 4</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <header>
+                    <div id="header-div">
+                        <h1 class="text">Proyecto de Aula</h1>
+                        <h3 class="text">Integrantes</h3>
+                        <!-- ol para lista numeradas -->
+                        <!-- li los elementos de la lista -->
+                        <!-- ul listas de puntos -->
+                        <ul class="text list">
+                            <li>John Esteban Lievano Mendez</li>
+                            <li>Edizon Alexander Meza Leal</li>
+                            <li>Andres Elias Roa Puentes</li>
+                            <li>Samuel David Loaiza Ocampo</li>
+                            <li>Julian Dario Grajales Gomez</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box space-lg" style="margin-top: 0; margin-bottom: 0;">
+                <section id="">
+                    <article class="article">
+                        <div class="space-lg" style="margin-top: 0;">
+                            <p class="space-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fuga,commodi, laudantium officia repellat deserunt nesciunt odit sint tempore, rerum facilis ullam ab sunt perferendis necessitatibus quasi fugit expedita est? </p>
+                            <p class="space-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fuga, commodi, laudantium officia repellat deserunt nesciunt odit sint tempore, rerum facilis ullam ab sunt perferendis necessitatibus quasi fugit expedita est? </p>
+                        </div>
+                    </article>
+                    <article class="article">
+                        <center>
+                            <div id="div-img" class="w3-content w3-display-container space-lg">
+                                <img class="mySlides size-lg" src="https://tinyurl.com/29swxofc" alt="tecno">
+                                <img class="mySlides size-lg" src="https://tinyurl.com/2dx5umpp" alt="tecno">
+                                <img class="mySlides size-lg" src="https://tinyurl.com/23m8s46h" alt="tecno">
+                                <img class="mySlides size-lg" src="https://tinyurl.com/2d66ksa5" alt="tecno">
+                                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+                                </div>
+                            </div>
+                        </center>
+                    </article>
+                    <article class="article"> 
+                        <!-- 1em == 16px -->
+                        
+                        <div id="div-grid" class="space-lg"> 
+                            <div class="element"></div>
+                            <div class="element"></div>
+                            <div class="element"></div>
+                            <div class="element"></div>
+                            <div class="element"></div>
+                            <div class="element"></div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <div>
+            <footer>
+                <h3 class="text" style="margin: 0; padding: 0;">Footer</h3>
+                <center><p >copyright</p></center> 
+            </footer>
+        </div>
+    </body>
+</html>
