@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 body {
     width: 100%;
     height: auto;
@@ -18,10 +17,18 @@ footer {
     background-image: linear-gradient(rgb(201, 201, 201), rgb(16, 13, 27));
 }
 
+img {
+    border-radius: 0.5em;
+    object-fit: cover;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+}
+
 /* identificadores */
 #header {
     margin: 0;
-    background-color: rgb(16, 13, 27);
+    background-image: linear-gradient(rgba(16, 13, 27, 0.8), 
+    rgba(16, 13, 27, 0.8)), url(https://surfshark.com/wp-content/uploads/2023/01/Browsers_for_privacy_hero-1024x501.png);
+    background-size: cover;
     /* position: relative; */
     width: 100%;
     color: rgb(211, 211, 211);
@@ -40,8 +47,8 @@ footer {
 
 #navbar {
     display: none;
-    width: 6em;
-    height: 8em;
+    width: 10em;
+    height: 8.5em;
     background-color:  rgb(201, 201, 201);
     border-radius: 0.5em;
     color: rgb(16, 13, 27) !important;
@@ -59,13 +66,11 @@ footer {
     grid-template-rows: 1.5fr 1fr;
 }
 
+#Navegadores {
+    margin-top: 12em;
+}
 
 /* clases */
-.container {
-    background-color: rgb(201, 201, 201);
-    width: 100%;
-    height: auto;
-}
 
 .button {
     background-color: rgb(16, 13, 27);
@@ -84,7 +89,10 @@ footer {
     margin: auto;
     padding: auto;
 }
-
+.article {
+    margin-bottom: 1em;
+    width: 100%;
+}
 .box a {
     text-decoration: none;
     color: rgb(24, 24, 24);
@@ -114,6 +122,26 @@ footer {
     background-color: rgba(143, 175, 235, 0.5);
 }
 
+.Metodologia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 15.625em;
+    grid-gap: 1em;
+}
+.Metodologia div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 6.25em;
+    grid-gap: 3em;
+}
+.Metodologia:nth-child(1){
+    grid-column-start: span 2;
+}
+
+.article p {
+    padding: 0 10em;
+}
+
 /* estandares */
 .font-sm {
     font-size: small;
@@ -123,6 +151,9 @@ footer {
 }
 .font-blg {
     font-size: x-large;
+}
+.font-xblg {
+    font-size: xx-large;
 }
 
 .space-sm {
@@ -137,17 +168,99 @@ footer {
     margin: 2em;
     padding: 1em;
 }
+.font-xblg {
+    font-size: xx-large;
+}
 
 .size-sm {
+    object-fit: contain;
     width: 40%;
 }
 .size-lg {
-    width: 100%;
+    object-fit: contain;
+    width: 70%;
 }
 .size-blg {
+    object-fit: contain;
     width: 150%;
 }
 
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
+.w3-left, .w3-right {
+    color: black;
+    font-size: 2em;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.w3-left {
+    left: 0;
+}
+
+.w3-right {
+    right: 0;
+}
+
+
+
+@media only screen and (max-width: 1920px) {
+    p {
+        font-size: 1em;
+    }
+
+    .article {
+        margin-bottom: 3em;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .Metodologia {
+        grid-template-columns: 1fr;
+    }
+
+    .Metodologia div {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .Metodologia img {
+        width: 100%;
+    }
+
+    h3, p {
+        padding: 0 1em;
+    }
+
+    .article p {
+        padding: 0 0.5em;
+    }
+
+    .space-sm, .space-lg, .space-blg {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .size-lg {
+        width: 100%;
+    }
+
+    #Navegadores {
+        margin-top: 22em;
+    }
+}

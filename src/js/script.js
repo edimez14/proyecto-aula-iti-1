@@ -1,27 +1,46 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+document.addEventListener("DOMContentLoaded", function() {
+    // Arrays para almacenar las imágenes de cada sección
+    var imgSources = [
+        "https://tinyurl.com/2dj239aw",
+        "https://tinyurl.com/2bsf8cvf",
+        "https://tinyurl.com/25u9tmts",
+        "https://tinyurl.com/294t6fcd"
+    ];
 
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+    function randomizeSlides(containerId) {
+        var container = document.getElementById(containerId);
+        var slides = container.getElementsByClassName("mySlides");
+        var randomIndex = Math.floor(Math.random() * imgSources.length);
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[randomIndex].style.display = "block";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
+
+    // Llamar a la función para cada sección
+    randomizeSlides("div-img-navegadores");
+    randomizeSlides("div-img-buscadores");
+    randomizeSlides("div-img-blocs");
+
+    // Mostrar los controles para los slideshows
+    function plusDivs(n, containerId) {
+        var container = document.getElementById(containerId);
+        var slides = container.getElementsByClassName("mySlides");
+        var currentSlideIndex = Array.from(slides).findIndex(slide => slide.style.display === "block");
+        slides[currentSlideIndex].style.display = "none";
+        var newIndex = (currentSlideIndex + n + slides.length) % slides.length;
+        slides[newIndex].style.display = "block";
     }
-    x[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " w3-white";
-}
+
+    function currentDiv(n, containerId) {
+        var container = document.getElementById(containerId);
+        var slides = container.getElementsByClassName("mySlides");
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[n - 1].style.display = "block";
+    }
+
+    window.plusDivs = plusDivs;
+    window.currentDiv = currentDiv;
+});
