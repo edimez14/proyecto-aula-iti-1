@@ -27,13 +27,30 @@ footer {
     color: rgb(211, 211, 211);
 }
 
+#button-navbar {
+    width: 2.625em;
+    height: 2.359375em;
+    position: absolute;
+}
+
+#button-navbar:hover > #navbar {
+    display: block;
+    position: absolute;
+}
+
 #navbar {
     display: none;
     width: 6em;
-    height: 10em;
+    height: 8em;
     background-color:  rgb(201, 201, 201);
     border-radius: 0.5em;
     color: rgb(16, 13, 27) !important;
+    padding: 1em;
+    text-align: center;
+}
+
+#navbar ul {
+    list-style-type: none;
 }
 
 #div-grid {
